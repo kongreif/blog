@@ -1,0 +1,52 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+
+#################################################################################
+# Configured cops
+
+# This keeps the git diffs small.
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: consistent_comma
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+# This keeps the syntax consistent no matter the length of the array.
+Style/SymbolArray:
+  EnforcedStyle: brackets
+Style/WordArray:
+  EnforcedStyle: brackets
+
+# The required underscore makes it clear that the instance variable is not meant
+# to be used directly.
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: required
+
+#################################################################################
+# Disabled cops
+
+Metrics:
+  Enabled: false
+
+Layout/LineLength:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+#################################################################################
+# Enables new cops
+AllCops:
+    NewCops: enable
+
