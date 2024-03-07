@@ -9,6 +9,14 @@ module PostsHelper
     include Rouge::Plugins::Redcarpet
   end
 
+  def rouge_syntax_highlighting_css
+    theme = Rouge::Themes::Github.mode(:dark)
+
+    # rubocop:disable Rails/OutputSafety
+    theme.render(scope: '.highlight').html_safe
+    # rubocop:enable Rails/OutputSafety
+  end
+
   def markdown(text)
     renderer = HTML.new(hard_wrap: true, filter_html: true)
     options = {
