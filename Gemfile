@@ -71,3 +71,5 @@ end
 
 gem 'devise'
 gem 'pundit'
+gem 'redcarpet'
+gem 'rouge'
