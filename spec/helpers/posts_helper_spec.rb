@@ -2,16 +2,34 @@
 
 require 'rails_helper'
 
-# Specs in this file have access to a helper object that includes
-# the PostsHelper. For example:
-#
-# describe PostsHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
 RSpec.describe PostsHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe '#rouge_syntax_highlighting_css' do
+    it 'generates CSS for syntax highlighting' do
+      css = helper.rouge_syntax_highlighting_css
+      expect(css).to include('.highlight')
+    end
+  end
+
+  describe '#markdown' do
+    let(:markdown_text) { "## Heading\n\nSome **bold** text" }
+    let(:html_output) { helper.markdown(markdown_text) }
+
+    it 'converts markdown to HTML' do
+      expect(html_output).to include('<h2>Heading</h2>')
+      expect(html_output).to include('<strong>bold</strong>')
+    end
+
+    it 'sanitizes the HTML output' do
+      sanitized_markdown = "<script>alert('XSS');</script>"
+      sanitized_output = helper.markdown(sanitized_markdown)
+      expect(sanitized_output).not_to include('<script>')
+    end
+
+    it 'applies Rouge syntax highlighting for code blocks' do
+      code_markdown = "```ruby\ndef hello\n  puts 'world'\nend\n```"
+      code_output = helper.markdown(code_markdown)
+      expect(code_output).to include('<pre')
+      expect(code_output).to include('<code')
+    end
+  end
 end
