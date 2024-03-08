@@ -55,6 +55,17 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    if current_user&.admin?
+      @post = Post.find(params[:id])
+      @post.destroy
+
+      redirect_to posts_path, notice: t(:'posts.post_deleted')
+    else
+      redirect_to root_path, alert: t(:admin_alert)
+    end
+  end
+
   private
 
   def post_params

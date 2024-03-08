@@ -14,7 +14,7 @@
     <div class="actions">
       <% if current_user&.admin? %>
         <%= button_to "Edit", edit_post_path(post), method: :get, class: "primary" %>
-        <%= button_to "Delete", post, method: :delete, class: "danger", data: { confirm: "Are you sure?" } %>
+        <%= button_to "Delete", post, method: :delete, class: "danger", data: { turbo_confirm: "Are you sure?" } %>
       <% end %>
     </div>
   </div>
