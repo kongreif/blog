@@ -3,3 +3,4 @@ en:
   posts:
     post_created: "Successfully created post."
     post_updated: "Sucessfully updated post."
+    post_deleted: "Successfully deleted post."

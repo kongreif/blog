@@ -1,2 +1,21 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<% @posts.order(created_at: :desc).each do |post| %>
+  <div class="post-card">
+    <%= link_to post do %>
+      <div class="post-content">
+        <h2 class="headline"><%= post.title %></h2>
+        <p class="date">
+          <%= post.created_at.strftime("%B %e, %Y") %>
+        </p>
+        <p class="snippet">
+          <%= markdown(post.content.truncate(300, separator: ' ')) %>
+        </p>
+      </div>
+    <% end %>
+    <div class="actions">
+      <% if current_user&.admin? %>
+        <%= button_to "Edit", edit_post_path(post), method: :get, class: "primary" %>
+        <%= button_to "Delete", post, method: :delete, class: "danger", data: { confirm: "Are you sure?" } %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

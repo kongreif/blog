@@ -8,9 +8,10 @@
   --color-header: #131D1D;
   --color-text-header: #BDDEF9;
   --color-text-body: #DFEFFC;
+  --color-text-date: #B3B2B2;
 
   /* Typography */
-  --font-family: 'Lato', sans-serif;
+  --font-family: 'roboto', sans-serif;
   --line-height-headers: 1.1;
   --line-height-body: 1.5;
 

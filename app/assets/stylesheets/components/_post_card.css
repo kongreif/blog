@@ -1,0 +1,40 @@
+.post-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-xl);
+
+  .post-content {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    .headline {
+      color: var(--color-text-header);
+      font-size: var(--font-size-xxl);
+      line-height: var(--line-height-headers);
+      margin-bottom: var(--space-xxs);
+    }
+
+    .date {
+      color: var(--color-text-date);
+      font-size: var(--font-size-s);
+      font-style: italic;
+      margin-bottom: var(--space-s);
+    }
+
+    p {
+      color: var(--color-text-body);
+    }
+  }
+
+
+  .actions {
+    margin-top: var(--space-xs);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-s);
+  }
+}
+
