@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class PostsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index
     @posts = Post.all
   end
@@ -10,30 +12,46 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    if current_user&.admin?
+      @post = Post.new
+    else
+      redirect_to root_path, alert: 'You must be an admin to perform this action.'
+    end
   end
 
   def edit
-    @post = Post.find(params[:id])
+    if current_user&.admin?
+      @post = Post.find(params[:id])
+    else
+      redirect_to root_path, alert: 'You must be an admin to perform this action.'
+    end
   end
 
   def create
-    @post = Post.new(post_params)
+    if current_user&.admin?
+      @post = Post.new(post_params)
 
-    if @post.save
-      redirect_to @post
+      if @post.save
+        redirect_to @post
+      else
+        render 'new', status: :unprocessable_entity
+      end
     else
-      render 'new', status: :unprocessable_entity
+      redirect_to root_path, alert: 'You must be an admin to perform this action.'
     end
   end
 
   def update
-    @post = Post.find(params[:id])
+    if current_user&.admin?
+      @post = Post.find(params[:id])
 
-    if @post.update(post_params)
-      redirect_to @post
+      if @post.update(post_params)
+        redirect_to @post
+      else
+        render 'edit', status: :unprocessable_entity
+      end
     else
-      render 'edit', status: :unprocessable_entity
+      redirect_to root_path, alert: 'You must be an admin to perform this action.'
     end
   end
 
