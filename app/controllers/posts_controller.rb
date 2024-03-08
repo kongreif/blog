@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     if current_user&.admin?
       @post = Post.new
     else
-      redirect_to root_path, alert: 'You must be an admin to perform this action.'
+      redirect_to root_path, alert: t(:admin_alert)
     end
   end
 
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
     if current_user&.admin?
       @post = Post.find(params[:id])
     else
-      redirect_to root_path, alert: 'You must be an admin to perform this action.'
+      redirect_to root_path, alert: t(:admin_alert)
     end
   end
 
@@ -37,7 +37,7 @@ class PostsController < ApplicationController
         render 'new', status: :unprocessable_entity
       end
     else
-      redirect_to root_path, alert: 'You must be an admin to perform this action.'
+      redirect_to root_path, alert: t(:admin_alert)
     end
   end
 
@@ -51,7 +51,7 @@ class PostsController < ApplicationController
         render 'edit', status: :unprocessable_entity
       end
     else
-      redirect_to root_path, alert: 'You must be an admin to perform this action.'
+      redirect_to root_path, alert: t(:admin_alert)
     end
   end
 
