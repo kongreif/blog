@@ -1,2 +1,5 @@
 en:
   admin_alert: "You must be an admin to perform this action."
+  posts:
+    post_created: "Successfully created post."
+    post_updated: "Sucessfully updated post."
