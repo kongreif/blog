@@ -1,0 +1,14 @@
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+nav a {
+  color: var(--color-text-header);
+}
