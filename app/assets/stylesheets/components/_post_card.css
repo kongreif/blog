@@ -14,14 +14,6 @@
       color: var(--color-text-header);
       font-size: var(--font-size-xxl);
       line-height: var(--line-height-headers);
-      margin-bottom: var(--space-xxs);
-    }
-
-    .date {
-      color: var(--color-text-date);
-      font-size: var(--font-size-s);
-      font-style: italic;
-      margin-bottom: var(--space-s);
     }
 
     p {

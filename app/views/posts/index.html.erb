@@ -3,11 +3,11 @@
     <%= link_to post do %>
       <div class="post-content">
         <h2 class="headline"><%= post.title %></h2>
-        <p class="date">
+        <span class="date">
           <%= post.created_at.strftime("%B %e, %Y") %>
-        </p>
+        </span>
         <p class="snippet">
-          <%= markdown(post.content.truncate(300, separator: ' ')) %>
+          <%= post.excerpt %>
         </p>
       </div>
     <% end %>

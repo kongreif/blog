@@ -81,3 +81,14 @@ hr {
   height: 1px;
   margin: 2rem 0;
 }
+
+span {
+  margin-top: 0;
+}
+
+.date {
+  color: var(--color-text-date);
+  font-size: var(--font-size-s);
+  font-style: italic;
+  margin-bottom: var(--space-s);
+}
