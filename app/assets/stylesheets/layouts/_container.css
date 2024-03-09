@@ -7,6 +7,6 @@
   @media (min-width: 50rem) {
     padding-right: var(--space-m);
     padding-left: var(--space-m);
-    max-width: 60rem;
+    max-width: 55rem;
   }
 }

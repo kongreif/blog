@@ -1,19 +1,24 @@
 :root {
   /* Colors */
-  --color-primary: #3E7099;
-  --color-primary-hover: #2d5271;
-  --color-danger: #ba3434;
-  --color-danger-hover: #9a3a3a;
-  --color-background: #090F13;
-  --color-header: #131D1D;
-  --color-text-header: #BDDEF9;
-  --color-text-body: #DFEFFC;
-  --color-text-date: #B3B2B2;
+  --color-primary: #4B9FCC;
+  --color-primary-hover: #3794C0;
+  --color-danger: #FF6B6B;
+  --color-danger-hover: #E55050;
+  --color-background: #071B29;
+  --color-header: #142F43;
+  --color-text-header: #FFFFFF;
+  --color-text-body: #D1E5ED;
+  --color-text-date: #8FA6B2;
+  --color-link: #4B9FCC;
+  --color-link-hover: #6CB2E3;
+  --color-accent: #082330;
+  --color-border: #1E4155;
+
 
   /* Typography */
   --font-family: 'roboto', sans-serif;
   --line-height-headers: 1.1;
-  --line-height-body: 1.5;
+  --line-height-body: 1.8;
 
   /* Fontsizes */
   --font-size-xs: 0.75rem;
