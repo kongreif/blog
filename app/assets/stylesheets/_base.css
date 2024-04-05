@@ -51,14 +51,17 @@ h1 {
 
 h2 {
   font-size: var(--font-size-xxl);
+  margin-top: var(--space-xl);
 }
 
 h3 {
   font-size: var(--font-size-xl);
+  margin-top: var(--space-l);
 }
 
 h4 {
   font-size: var(--font-size-l);
+  margin-top: var(--space-m);
 }
 
 a {
@@ -91,4 +94,8 @@ span {
   font-size: var(--font-size-s);
   font-style: italic;
   margin-bottom: var(--space-s);
+}
+
+.highlight {
+  padding: var(--space-s);
 }
