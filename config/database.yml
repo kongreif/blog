@@ -80,6 +80,9 @@ test:
 #
 production:
   <<: *default
+  pool: 5
+  timeout: 5000
+  host: localhost
   database: blog_production
-  username: blog
+  username: <%= ENV["BLOG_DATABASE_USERNAME"] %>
   password: <%= ENV["BLOG_DATABASE_PASSWORD"] %>
