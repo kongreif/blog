@@ -1,4 +1,8 @@
 en:
+  navbar:
+    posts_link: "Posts"
+    about_link: "About"
+    new_post_link: "New Post"
   admin_alert: "You must be an admin to perform this action."
   posts:
     post_created: "Successfully created post."

@@ -2,10 +2,10 @@
   <div class="container">
     <nav>
       <ul>
-        <li><%= link_to "Posts", posts_path %></li>
-        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to t(:'navbar.posts_link'), posts_path %></li>
+        <li><%= link_to t(:'navbar.about_link'), about_path %></li>
         <% if current_user&.admin? %>
-          <li><%= link_to "New Post", new_post_path %></li>
+          <li><%= link_to t(:'navbar.new_post_link'), new_post_path %></li>
         <% end %>
       </ul>
     </nav>
