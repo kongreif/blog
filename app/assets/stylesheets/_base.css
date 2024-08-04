@@ -47,6 +47,7 @@ select {
 
 h1 {
   font-size: var(--font-size-xxxl);
+  margin-bottom: 1rem;
 }
 
 h2 {
