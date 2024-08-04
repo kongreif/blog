@@ -1,3 +1,8 @@
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
 nav ul {
   margin: 0;
   padding: 0;
@@ -11,4 +16,8 @@ nav li {
 
 nav a {
   color: var(--color-text-header);
+}
+
+.nav-header {
+  font-weight: bold;
 }
