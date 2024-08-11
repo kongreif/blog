@@ -9,8 +9,5 @@
   <%= @post.created_at.strftime("%B %d, %Y") %>
 </p>
 <p>
-  <%= @post.excerpt %>
-</p>
-<p>
   <%= markdown(@post.content) %>
 </p>
