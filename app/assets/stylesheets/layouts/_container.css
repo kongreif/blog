@@ -4,9 +4,9 @@
   padding-right: var(--space-xs);
   padding-left: var(--space-xs);
 
-  @media (min-width: 50rem) {
+  @media (min-width: 45rem) {
     padding-right: var(--space-m);
     padding-left: var(--space-m);
-    max-width: 55rem;
+    max-width: 60rem;
   }
 }

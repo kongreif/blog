@@ -53,11 +53,13 @@ h1 {
 h2 {
   font-size: var(--font-size-xxl);
   margin-top: var(--space-xl);
+  margin-bottom: var(--space-m);
 }
 
 h3 {
   font-size: var(--font-size-xl);
   margin-top: var(--space-l);
+  margin-bottom: var(--space-s);
 }
 
 h4 {
@@ -102,4 +104,12 @@ span {
   margin-bottom: var(--space-s);
   margin-top: var(--space-s);
   overflow-x: auto;
+  border-radius: 0.5rem;
+}
+
+code {
+  margin-right: var(--space-xxs);
+  margin-left: var(--space-xxs);
+  font-size: var(--font-size-m);
+  background-color: var(--color-code);
 }
