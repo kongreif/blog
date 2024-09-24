@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '3.3.4'
+ruby File.read('.ruby-version').strip
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.1'
@@ -11,7 +11,7 @@ gem 'rails', '~> 7.1.1'
 gem 'sprockets-rails'
 
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1'
+gem 'sqlite3'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '>= 5.0'

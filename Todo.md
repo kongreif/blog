@@ -1,0 +1,6 @@
+- Mailing
+- Imprint
+- Privacy notice
+- Ability to add comments
+- Photo for about
+- Make inline code more readable
