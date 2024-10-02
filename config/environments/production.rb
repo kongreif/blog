@@ -73,8 +73,17 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "blog_production"
 
-  # TODO: Set up a real email delivery method for production.
-  # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'kongreif.com', protocol: 'https' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: ENV.fetch('SMTP_ADDRESS', nil),
+    port: ENV.fetch('SMTP_PORT', nil),
+    domain: ENV.fetch('SMTP_DOMAIN', nil),
+    user_name: ENV.fetch('SMTP_USER_NAME', nil),
+    password: ENV.fetch('SMTP_PASSWORD', nil),
+    authentication: ENV.fetch('SMTP_AUTHENTICATION', nil),
+    enable_starttls_auto: ENV.fetch('SMTP_ENABLE_STARTTLS_AUTO', nil),
+  }
 
   config.action_mailer.perform_caching = false
 
