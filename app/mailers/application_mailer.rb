@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@kongreif.com'
+  default from: 'no-reply@em5332.kongreif.com'
   layout 'mailer'
 end

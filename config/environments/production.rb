@@ -85,6 +85,8 @@ Rails.application.configure do
     enable_starttls_auto: ActiveModel::Type::Boolean.new.cast(ENV.fetch('SMTP_ENABLE_STARTTLS_AUTO', nil)),
   }
 
+  config.action_mailer.default_options = { from: 'no-reply@em5332.kongreif.com' }
+
   config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
