@@ -1,13 +1,12 @@
 .header {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-s);
-  justify-content: space-between;
   padding-top: var(--space-m);
   padding-bottom: var(--space-m);
-  background-color: var(--color-header);
+  background-color: var(--color-background-header);
 
   @media (min-width: 50rem) {
     margin-bottom: var(--space-xl);
   }
+
+  top: 0;
+  position: sticky;
 }

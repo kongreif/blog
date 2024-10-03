@@ -25,6 +25,13 @@ body {
   background-color: var(--color-background);
 }
 
+.app-container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
+  padding-bottom: var(--space-xxl);
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family);
   line-height: var(--line-height-headers);
@@ -52,7 +59,7 @@ h1 {
 
 h2 {
   font-size: var(--font-size-xxl);
-  margin-top: var(--space-xl);
+  margin-top: var(--space-xxl);
   margin-bottom: var(--space-m);
 }
 
@@ -100,16 +107,32 @@ span {
 }
 
 .highlight {
-  padding: var(--space-s);
-  margin-bottom: var(--space-s);
-  margin-top: var(--space-s);
+  padding-left: var(--space-s);
+  padding-right: var(--space-s);
+  margin-bottom: var(--space-xxl);
+  margin-top: var(--space-xxl);
   overflow-x: auto;
   border-radius: 0.5rem;
+
+  /* Firefox scrollbar styling */
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+/* WebKit scrollbar styling */
+.highlight::-webkit-scrollbar {
+  background-color: var(--scrollbar-track);
+}
+
+.highlight::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+}
+
+.highlight::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
 }
 
 code {
-  margin-right: var(--space-xxs);
-  margin-left: var(--space-xxs);
   font-size: var(--font-size-m);
-  background-color: var(--color-code);
+  background-color: var(--color-background-lighter);
 }

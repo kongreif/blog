@@ -10,7 +10,7 @@ module PostsHelper
   end
 
   def rouge_syntax_highlighting_css
-    theme = Rouge::Themes::Github.mode(:dark)
+    theme = Rouge::Themes::ThankfulEyes
 
     # rubocop:disable Rails/OutputSafety
     theme.render(scope: '.highlight').html_safe

@@ -4,10 +4,11 @@
   --color-primary-hover: #3794C0;
   --color-danger: #FF6B6B;
   --color-danger-hover: #E55050;
-  --color-background: #071B29;
-  --color-header: #142F43;
+  --color-background: #06131c;
+  --color-background-lighter: #122b3b;
+  --color-background-header: #091823;
   --color-text-header: #FFFFFF;
-  --color-text-body: #D1E5ED;
+  --color-text-body: #d1dbdf;
   --color-text-date: #8FA6B2;
   --color-link: #4B9FCC;
   --color-link-hover: #6CB2E3;
@@ -45,4 +46,9 @@
 
   /* Border radius */
   --border-radius: 0.15rem;
+
+  /* Scrollbar */
+  --scrollbar-track: #122b3b;
+  --scrollbar-thumb: #06131c;
+  --scrollbar-hover: #091823;
 }
