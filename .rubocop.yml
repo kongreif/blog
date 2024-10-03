@@ -45,6 +45,9 @@ RSpec/ExampleLength:
 RSpec/MultipleMemoizedHelpers:
   Enabled: false
 
+Rails/Output:
+  Enabled: false
+
 #################################################################################
 # Enables new cops
 AllCops:
