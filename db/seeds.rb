@@ -16,7 +16,11 @@ puts 'Adding posts'
       num1 + num2
     end
     ```
-    This is some `inline code` to test.
+    This is some `inline code` to test.\n
+    ```ruby
+    params = ActionController::Parameters.new({post: { title: 'Title', content: 'Content' }}).require(:post)
+    #<ActionController::Parameters {"title"=>"Title", "content"=>"Content"} permitted: false>
+    ```
     ## #{Faker::Lorem.words(number: (1..9).to_a.sample).join(' ')}
     #{Faker::Lorem.paragraphs(number: (3..9).to_a.sample).join(' ')}\n
   TEXT
