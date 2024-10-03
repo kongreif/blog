@@ -38,5 +38,5 @@
 
 
 # Ignore sqlite3 files
-/db/*.sqlite3
+/db/*.sqlite3*
 /db/*.sqlite3-journal
