@@ -65,6 +65,8 @@ group :development do
 end
 
 gem 'devise'
+gem 'logger'
+gem 'ostruct'
 gem 'pundit'
 gem 'redcarpet'
 gem 'rouge'
