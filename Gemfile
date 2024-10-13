@@ -61,6 +61,7 @@ end
 group :development do
   gem 'annotate'
   gem 'rails_live_reload'
+  gem 'ruby-lsp'
   gem 'web-console'
 end
 
