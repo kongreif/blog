@@ -21,6 +21,7 @@
   --font-family: 'roboto', sans-serif;
   --line-height-headers: 1.1;
   --line-height-body: 1.8;
+  --line-height-code: 1.5;
 
   /* Fontsizes */
   --font-size-xs: 0.75rem;

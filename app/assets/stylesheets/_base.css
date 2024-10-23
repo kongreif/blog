@@ -109,10 +109,10 @@ span {
 .highlight {
   padding-left: var(--space-s);
   padding-right: var(--space-s);
-  margin-bottom: var(--space-xxl);
-  margin-top: var(--space-xxl);
+  margin-bottom: var(--space-l);
+  margin-top: var(--space-l);
   overflow-x: auto;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
 
   /* Firefox scrollbar styling */
   scrollbar-width: thin;
@@ -132,7 +132,11 @@ span {
   background-color: var(--scrollbar-thumb-hover);
 }
 
-code {
-  font-size: var(--font-size-m);
+.highlight pre,
+.highlight code {
+  font-size: var(--font-size-s);
   background-color: var(--color-background-lighter);
+  line-height: var(--line-height-code);
+  margin-top: var(--space-s);
+  margin-bottom: var(--space-s);
 }
